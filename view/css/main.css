@@ -1,0 +1,291 @@
+/* Configuración global de la página */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Configuración general de la página HTML */
+html {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+/* Configuración general del cuerpo de la página */
+body {
+    background-color: #002069;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.main {
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px;
+    min-height: 100vh;
+    padding: 1rem;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Estilos para la pantalla*/
+@media only screen and (min-width: 800px) {
+    .main {
+        min-height: 95vh;
+        max-height: 95vh;
+        border: 1px solid #000;
+        box-shadow: 5px 10px 8px rgba(136, 136, 136, 0.5);
+    }
+}
+
+/* Estilos para secciones */
+section {
+    width: 100%;
+}
+
+/* Estilos para enlaces */
+a {
+    color: royalblue;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #d08504;
+}
+
+/* Estilo de texto en negrita */
+.bold {
+    font-weight: bold;
+}
+
+/* Estilos para la lista de tareas */
+.list {
+    width: 100%;
+    max-height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 0.75rem;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+/* Estilos para la pantalla */
+@media only screen and (min-width: 400px) {
+    .list {
+        max-height: 75vh;
+    }
+}
+
+/* Estilos para filas de la lista */
+.list__row {
+    width: 100%;
+    max-width: 100%;
+    border-bottom: 1px solid #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Estilos para la última fila de la lista */
+.list__row:last-child {
+    border: none;
+}
+
+/* Estilos para el encabezado de la lista */
+.list__header {
+    width: 100%;
+    padding: 0.5em;
+    position: sticky;
+    top: 0;
+    background: #002069;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilos para la pantalla */
+@media only screen and (min-width: 768px) {
+    .list__header {
+        flex-direction: row;
+    }
+}
+
+/* Estilos para el título del encabezado de la lista */
+.list__header h1 {
+    font-size: 1.5rem;
+}
+
+/* Estilos para el selector en el encabezado de la lista */
+.list__header_select {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1rem;
+}
+
+/* Estilos para el botón en el encabezado de la lista */
+.list__header_select button {
+    background-color: #FBCF4C;
+    margin-left: 0.25rem;
+}
+
+/* Estilos para elementos de la lista */
+.list__item {
+    flex-grow: 1;
+    padding: 0.5em;
+}
+
+/* Estilos para el botón de eliminación en la lista */
+.list__removeItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el botón de eliminación */
+.remove-button {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    padding-right: 0.5em;
+    outline: none;
+}
+
+/* Estilos para el botón de eliminación al enfocar o pasar el cursor por encima */
+.remove-button:focus,
+.remove-button:hover {
+    text-shadow: 2px 2px 5px rgba(136, 136, 136, 0.5);
+}
+
+/* Estilos para la sección de añadir tarea */
+.add>h2 {
+    color: #ffa304;
+    font-size: 1.25rem;
+}
+
+/* Estilos para el formulario de añadir tarea */
+.add__form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    column-gap: 5px;
+}
+
+/* Estilos para la pantalla */
+@media only screen and (min-width: 600px) {
+    .add__form {
+        grid-template-columns: 90% 10%;
+    }
+}
+
+/* Estilos para etiquetas del formulario */
+.add__form label {
+    position: absolute;
+    left: -10000px;
+}
+
+/* Estilos para inputs y selects en el formulario de añadir tarea */
+.add__inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.add__inputs>input,
+.add__inputs>select {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #000;
+}
+
+/* Estilos para selects en el formulario de añadir tarea */
+.add__inputs>select {
+    border-bottom: none;
+}
+
+/* Estilos para el botón de añadir en el formulario de añadir tarea */
+.add__addItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-button {
+    height: 100%;
+    width: 100%;
+    color: #000000;
+    font-size: 1rem;
+    background: #FBCF4C;
+    border: 1px solid #FBCF4C;
+    border-radius: 10px;
+    padding: 0.25rem;
+    outline: none;
+}
+
+/* Estilos para el botón de añadir al enfocar o pasar el cursor por encima */
+.add-button:focus,
+.add-button:hover {
+    box-shadow: 5px 2px 5px rgba(136, 136, 136, 0.5);
+}
+
+/* Estilos para el botón de añadir al hacer clic */
+.add-button:active {
+    transform: translate(1px, 2px);
+    box-shadow: 1px 1px 0 #000;
+}
+
+/* Estilos para la página de error */
+.errorPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Estilos para el título de la página de error */
+.errorPage h1 {
+    text-align: center;
+}
+
+/* Estilos para el contenido principal de la página de error */
+.errorPage main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    width: 80%;
+    overflow-x: scroll;
+}
+
+/* Estilos para la barra de desplazamiento en la lista de tareas */
+.list::-webkit-scrollbar-track {
+    background-color: #f5f5f5; /* Cambia el color aquí */
+    border-radius: 5px; /* Añade esquinas redondeadas */
+}
+
+/* Estilos para el cursor de desplazamiento en la lista de tareas */
+.list::-webkit-scrollbar-thumb {
+    background-color: #FBCF4C; /* Cambia el color aquí */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+}
+
+/* Estilos para el tamaño de la barra de desplazamiento en la lista de tareas */
+.list::-webkit-scrollbar {
+    width: 10px; /* Cambia el tamaño aquí */
+}
